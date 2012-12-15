@@ -1322,6 +1322,7 @@
   [highway = 'tertiary'],
   [highway = 'residential'],
   [highway = 'unclassified'],
+  [highway = 'track'],
   [highway = 'road'] {
     [zoom >= 10][zoom < 13] {
       line-width: 1;
@@ -2536,24 +2537,25 @@
 
   [highway = 'primary'],
   [highway = 'primary_link'] {
-    [zoom >= 7][zoom < 12] {
-      line-width: 0.5;
+    [zoom >= 5][zoom < 12] {
+      line-width: 1.1;
       line-color: #ec989a;
-      [zoom >= 9] { line-width: 1.2; }
-      [zoom >= 10] { line-width: 2; }
-      [zoom >= 11] { line-width: 2.5; }
+      [zoom >= 6] { line-width: 2.2; }
+      [zoom >= 9] { line-width: 2.4; }
+      [zoom >= 10] { line-width: 2.5; }
+      [zoom >= 11] { line-width: 3; }
     }
   }
 
   [highway = 'secondary'],
   [highway = 'secondary_link'] {
-    [zoom >= 9][zoom < 12] {
-      line-width: 1;
+    [zoom >= 5][zoom < 12] {
+      line-width: 0.7;
       line-color: #fecc8b;
       [zoom >= 11] { line-width: 2; }
     }
   }
-
+ 
   ::railway {
     [railway = 'rail'][zoom >= 6][zoom < 13] {
       line-width: 0.6;

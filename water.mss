@@ -31,7 +31,7 @@
   [waterway = 'riverbank']::waterway,
   [landuse = 'water']::water,
   [natural = 'bay']::natural {
-    [zoom >= 6] {
+    [zoom >= 3] {
       polygon-fill: @water-color;
       polygon-gamma: 0.75;
     }
@@ -79,7 +79,7 @@
 }
 
 #water-lines-low-zoom {
-  [waterway = 'river'][zoom >= 8][zoom < 12] {
+  [waterway = 'river'][zoom >= 4][zoom < 12] {
     line-color: @water-color;
     line-width: 0.7;
     [zoom >= 9] { line-width: 1.2; }
@@ -109,7 +109,7 @@
     line-width: 2;
     line-cap: round;
     line-join: round;
-    [zoom >= 13] {
+    [zoom >= 13], [name = 'النيل الأزرق'] {
       line-width: 3;
       text-name: "[name]";
       text-face-name: @book-fonts;

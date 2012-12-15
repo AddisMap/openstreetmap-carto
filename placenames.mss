@@ -79,7 +79,7 @@
   [place = 'town'],
   [place = 'large_town'],
   [place = 'small_town'] {
-    [zoom >= 9] {
+    [zoom >= 8] {
       text-name: "[name]";
       text-size: 8;
       text-fill: #000;

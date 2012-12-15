@@ -213,7 +213,7 @@
 
   [natural = 'wood']::natural,
   [landuse = 'wood']::landuse {
-    [zoom >= 8] {
+    [zoom >= 3] {
       polygon-fill: #aed1a0;
     }
   }

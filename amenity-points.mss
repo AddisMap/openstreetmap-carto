@@ -105,7 +105,7 @@
     point-placement: interior;
   }
 
-  [amenity = 'hospital'][zoom >= 15]::amenity {
+  [amenity = 'hospital'][zoom >= 14]::amenity {
     point-file: url('symbols/hospital.p.16.png');
     point-placement: interior;
   }
@@ -130,7 +130,7 @@
     point-placement: interior;
   }
 
-  [amenity = 'embassy'][zoom >= 17]::amenity {
+  [amenity = 'embassy'][zoom >= 14]::amenity {
     point-file: url('symbols/embassy.png');
     point-placement: interior;
   }
@@ -147,7 +147,7 @@
 
   [waterway = 'lock']::waterway,
   [lock = 'yes']::lock {
-    [zoom >= 15] {
+    [zoom >= 17] {
       point-file: url('symbols/lock_gate.png');
       point-placement: interior;
     }
