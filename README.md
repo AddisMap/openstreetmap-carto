@@ -1,3 +1,21 @@
+# OpenStreetMap Carto - Ethiopia Version by AddisMap.com
+
+This project is the style which (might) be used on [AddisMap.com](http://www.addismap.com/)
+
+Current changes are:
+
+* Increase the visibility of roads, as Ethiopia does not have a high-scale road network
+* Increase visibility of lakes
+
+Planed:
+
+* Allow switching of the rendering to different languages (first: Amharic) with fallback to the standard name tag
+
+
+Original Readme follows ...
+
+---
+
 # OpenStreetMap Carto
 
 A project to re-implement the standard OpenStreetMap mapnik style, in CartoCSS
