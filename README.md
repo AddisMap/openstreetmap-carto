@@ -57,8 +57,19 @@ judgement. The work done in v1.0 and v2.0 will make it much easier to process th
 
 # Dependencies
 
-* carto >= 0.9.3 (we're using instances with cascading rules)
-* mapnik >= 2.0.0 (we might move to 2.1 in the near term)
+* [TileMill](mapbox.com/tilemill) - This is a TileMill project you can copy (or symlink) directly into your Mapbox/project directory
+
+OR
+
+* [carto](https://github.com/mapbox/carto) >= 0.9.3 (we're using instances with cascading rules) 
+* [mapnik](https://github.com/mapnik/mapnik/wiki/Mapnik-Installation) >= 2.0.0 (we might move to 2.1 in the near term
+
+---
+
+* [osm2pgsql](http://wiki.openstreetmap.org/wiki/Osm2pgsql) to import you data into a PostGIS database
+* [PostgreSQL](http://www.postgresql.org/)
+* [PostGIS](http://postgis.refractions.net/)
+* [ogr2ogr](http://www.gdal.org/) command line GDAL utility for processing vector data. here we use it to work around a encoding bug in the Nautral Earth data.
 
 # Notes on conversion
 
