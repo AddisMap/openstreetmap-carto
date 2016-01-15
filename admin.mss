@@ -3,7 +3,7 @@
 /* For performance reasons, the admin border layers are split into three groups
 for low, middle and high zoom levels.
 For each zoomlevel, all borders come from a single attachment, to handle
-overlapping borders correctly. 
+overlapping borders correctly.
 */
 
 #admin-low-zoom[zoom < 11],
@@ -123,6 +123,8 @@ overlapping borders correctly.
   text-halo-radius: 1.0;
   text-halo-fill: rgba(255,255,255,0.6);
   text-placement: line;
+  text-clip: true;
+  text-vertical-alignment: middle;
   text-dy: -10;
 }
 
@@ -133,6 +135,8 @@ overlapping borders correctly.
   text-halo-radius: 1.0;
   text-halo-fill: rgba(255,255,255,0.6);
   text-placement: line;
+  text-clip: true;
+  text-vertical-alignment: middle;
   text-dy: -10;
 }
 

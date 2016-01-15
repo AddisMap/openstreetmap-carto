@@ -10,7 +10,7 @@
 
 
 #buildings {
-  [zoom >= 12] {
+  [zoom >= 13] {
     polygon-fill: @building-low-zoom;
     polygon-clip: false;
     [zoom >= 15] {
@@ -23,7 +23,7 @@
 }
 
 #buildings-major {
-  [zoom >= 12] {
+  [zoom >= 13] {
     [aeroway = 'terminal'] {
       polygon-fill: @building-aeroway-fill;
       polygon-clip: false;
@@ -42,5 +42,11 @@
         line-color: @building-major-line;
       }
     }
+  }
+}
+
+#bridge {
+  [zoom >= 12] {
+    polygon-fill: #B8B8B8;
   }
 }

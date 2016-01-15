@@ -15,7 +15,16 @@ EXCEPTIONS = [
    "FIXME",
    "FixMe",
    "other",
-   "*"
+   "*",
+   "winery", #see discussion in https://github.com/gravitystorm/openstreetmap-carto/pull/1632
+   "antique", #see https://github.com/gravitystorm/openstreetmap-carto/pull/1900
+   "betting", #see https://github.com/gravitystorm/openstreetmap-carto/pull/1900
+   "delicatessen", #see https://github.com/gravitystorm/openstreetmap-carto/pull/1900
+   "dive", #see https://github.com/gravitystorm/openstreetmap-carto/pull/1900
+   "fish", #see https://github.com/gravitystorm/openstreetmap-carto/pull/1900
+   "gambling", #see https://github.com/gravitystorm/openstreetmap-carto/pull/1900
+   "insurance", #see https://github.com/gravitystorm/openstreetmap-carto/pull/1900
+   "pharmacy", #see https://github.com/gravitystorm/openstreetmap-carto/pull/1900
 ]
 
 

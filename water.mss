@@ -1,17 +1,19 @@
 @water-text: #6699cc;
 @glacier: #ddecec;
 @glacier-line: #9cf;
-@mud: #e6dcd1;
 
 #water-areas {
   [natural = 'glacier']::natural {
     [zoom >= 6] {
-      line-dasharray: 4,2;
-      line-width: 1.5;
+      line-width: 0.75;
       line-color: @glacier-line;
       polygon-fill: @glacier;
       [zoom >= 8] {
-        polygon-pattern-file: url('symbols/glacier.png');
+        line-width: 1.0;
+      }
+      [zoom >= 10] {
+        line-dasharray: 4,2;
+        line-width: 1.5;
       }
     }
   }
@@ -54,21 +56,6 @@
       }
     }
   }
-
-  [natural = 'mud'][zoom >= 10]::natural {
-    polygon-fill: @mud;
-    polygon-pattern-file: url('symbols/mud.png');
-    polygon-pattern-alignment: global;
-  }
-}
-
-#water-areas-overlay {
-  [natural = 'marsh'],
-  [natural = 'wetland'] {
-    [zoom >= 10] {
-      polygon-pattern-file: url('symbols/wetland.png');
-    }
-  }
 }
 
 #water-lines-casing {
@@ -100,7 +87,7 @@
       line-cap: butt;
       line-join: round;
       line-clip: false;
-    }  
+    }
     line-color: @water-color;
     line-width: 0.7;
     [zoom >= 9] { line-width: 1.2; }
@@ -285,6 +272,7 @@
       text-halo-fill: rgba(255,255,255,0.6);
       text-spacing: 600;
       text-placement: line;
+      text-vertical-alignment: middle;
       text-dy: 8;
     }
 
@@ -324,6 +312,24 @@
       [zoom >= 14] {
         text-size: 12;
       }
+    }
+  }
+}
+
+.text[zoom >= 10] {
+  [feature = 'natural_water'],
+  [feature = 'landuse_reservoir'],
+  [feature = 'landuse_basin'] {
+    [zoom >= 10][way_pixels > 3000],
+    [zoom >= 17] {
+      text-name: "[name]";
+      text-size: 12;
+      text-fill: @water-text;
+      text-face-name: @oblique-fonts;
+      text-halo-radius: 1;
+      text-halo-fill: rgba(255,255,255,0.6);
+      text-wrap-width: @standard-wrap-width;
+      text-placement: interior;
     }
   }
 }
