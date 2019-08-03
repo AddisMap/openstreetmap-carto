@@ -70,10 +70,12 @@
       polygon-fill: @land-color;
     }
     #piers-line {
-      line-width: 1.5;
+      line-width: 0.5;
       line-color: @land-color;
-      [zoom >= 13] { line-width: 3; }
-      [zoom >= 16] { line-width: 7; }
+      line-cap: square;
+      [zoom >= 13] { line-width: 1; }
+      [zoom >= 15] { line-width: 2; }
+      [zoom >= 17] { line-width: 4; }
     }
   }
 
@@ -114,16 +116,15 @@
   }
 }
 
-.text,
+#text-point,
 #text-line {
   [feature = 'waterway_dam'],
   [feature = 'waterway_weir'] {
-    #text-poly[zoom >= 15],
-    #text-line[zoom >= 15],
-    #text-point[zoom >= 17] {
+    #text-point[zoom >= 15],
+    #text-line[zoom >= 15] {
       text-name: "[name]";
-      text-halo-radius: 1;
-      text-halo-fill: rgba(255,255,255,0.6);
+      text-halo-radius: @standard-halo-radius;
+      text-halo-fill: @standard-halo-fill;
       text-fill: #222;
       text-size: 10;
       text-face-name: @book-fonts;
@@ -145,11 +146,11 @@
   [feature = 'man_made_breakwater'][zoom >= 15],
   [feature = 'man_made_groyne'][zoom >= 15],
   [feature = 'man_made_pier'][zoom >= 15] {
-    #text-poly,
+    #text-point,
     #text-line {
       text-name: "[name]";
-      text-halo-radius: 1;
-      text-halo-fill: rgba(255,255,255,0.6);
+      text-halo-radius: @standard-halo-radius;
+      text-halo-fill: @standard-halo-fill;
       text-fill: #222;
       text-size: 10;
       text-face-name: @book-fonts;
@@ -161,5 +162,12 @@
         text-spacing: 400;
       }
     }
+  }
+}
+
+#springs {
+  [natural = 'spring'][zoom >= 14] {
+    marker-file: url('symbols/spring.svg');
+    marker-clip: false;
   }
 }
